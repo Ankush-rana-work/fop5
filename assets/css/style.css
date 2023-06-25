@@ -1054,6 +1054,7 @@ footer .secondary-footer .copyright p a {
 .section-listing .listing ul li a{
     padding-left: 30px;
     position:relative;
+    display:flex;
 }
 .section-listing .listing ul li a:before{
     content:'';
@@ -1651,6 +1652,15 @@ footer .secondary-footer .copyright p a {
     }
 }
 @media screen and (max-width:767px){
+    .feedsTab {
+        padding: 50px 0 50px;
+    }
+    .feedsTab .feedsBlock ul li button {
+        min-width: 150px;
+    }
+    .feedsTab .feedsBlock ul li {
+        margin-right: 20px;
+    }
     .resource-members {
         padding: 50px 0;
     }
@@ -1815,8 +1825,18 @@ footer .secondary-footer .copyright p a {
         width: 100%;
     }
     .zigzag-container .zigzag-content-row .zigzag-content h3 {
+        margin-top:0;
         font-size: var(--font30);
         margin-bottom: 20px;
+    }
+    .zigzag-container .zigzag-content-row .zigzag-content {
+        padding: 50px 15px 50px 15px;
+    }
+    .zigzag-container .zigzag-content-row .zigzag-content h6 {
+        margin-top: 0;
+    }
+    .sectionHeading h2:after {
+        width: 150px;
     }
     .zigzag-container .zigzag-content-row .zigzag-content .btnPrimary{
         margin-top:50px;
@@ -1979,5 +1999,17 @@ footer .secondary-footer .copyright p a {
     }
     .common-cards .card-row {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .sectionHeading h2 {
+        margin-top: 0;
+    }
+    .zigzag-container .zigzag-content-row.reverse .zigzag-content h3 {
+        max-width: 370px;
+        margin-top: 0;
+    }
+}
+@media screen and (max-width:374px){
+    .feedsTab .feedsBlock ul li button {
+        min-width: 120px;
     }
 }
