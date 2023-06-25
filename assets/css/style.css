@@ -2010,6 +2010,11 @@ footer .secondary-footer .copyright p a {
 }
 @media screen and (max-width:374px){
     .feedsTab .feedsBlock ul li button {
-        min-width: 120px;
+        min-width: 103px;
+    }
+}
+@media screen and (max-width:350px){
+    header .mainNavbar .menubarWrap ul {
+        top: 120px;
     }
 }
