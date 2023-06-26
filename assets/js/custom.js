@@ -19,7 +19,29 @@ $('.slider').owlCarousel({
             items:1
         }
     }
-})
+});
+$('.newsScroll').owlCarousel({
+    loop: true,
+    autoplay: true,
+    items: 1,
+    nav: false,
+    dots:false,
+    autoplayHoverPause: true,
+    animateOut: 'slideOutUp',
+    animateIn: 'slideInUp',
+  
+    responsive:{
+        0:{
+            items:5
+        },
+        600:{
+            items:5
+        },
+        1000:{
+            items:5
+        }
+    }
+});
 $('.fallenHeroes-carousel').owlCarousel({
     loop:true,
     margin:20,
@@ -27,7 +49,7 @@ $('.fallenHeroes-carousel').owlCarousel({
     dots:true,
     autoplay: true,
     slideTransition: 'linear',
-    autoplayTimeout: 6000,
+    autoplayTimeout:3000,
     autoplaySpeed: 700,
     responsive:{
         0:{
