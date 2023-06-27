@@ -20,27 +20,20 @@ $('.slider').owlCarousel({
         }
     }
 });
-$('.newsScroll').owlCarousel({
-    loop: true,
-    autoplay: true,
-    items: 1,
-    nav: false,
-    dots:false,
-    autoplayHoverPause: true,
-    animateOut: 'slideOutUp',
-    animateIn: 'slideInUp',
-  
-    responsive:{
-        0:{
-            items:5
-        },
-        600:{
-            items:5
-        },
-        1000:{
-            items:5
-        }
-    }
+$(".newsCarousel").slick({
+        centerMode: true,
+        autoplay:true,
+        centerPadding: '60px',
+        slidesToShow: 7,
+        vertical: true,
+        verticalSwiping: true,
+        arrows: false,
+        swipeToSlide: true,
+        focusOnSelect: true,
+        speed: 500,
+        autoplaySpeed: 0,
+        infinite:true,
+        cssEase: 'linear',
 });
 $('.fallenHeroes-carousel').owlCarousel({
     loop:true,
