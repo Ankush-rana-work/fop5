@@ -87,6 +87,25 @@ $(document).ready(function(){
         autoplaySpeed: 0,
         infinite:true,
         cssEase: 'linear',
+        pauseOnHover: true,
+        pauseOnFocus: true,
+    });
+    $(".topNews-carousel").slick({
+        centerMode: true,
+        autoplay:true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        vertical: true,
+        verticalSwiping: true,
+        arrows: false,
+        swipeToSlide: true,
+        focusOnSelect: true,
+        speed:1500,
+        autoplaySpeed: 0,
+        infinite:true,
+        cssEase: 'linear',
+        pauseOnHover: true,
+        pauseOnFocus: true,
     });
 })
 
