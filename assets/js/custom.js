@@ -115,7 +115,14 @@ $(document).ready(function(){
     $('.btnToggle').click(function(){
         $('header .mainNavbar .menubarWrap ul').stop().slideToggle();
     });
+
+
+    // read more read less
+    $('.moreless-button').click(function() {
+        $('.moretext').toggleClass("showMore-showLess");
+    });
 });
+
 
 
 
