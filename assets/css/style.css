@@ -44,7 +44,10 @@ body, html{
 .bg-gray{
     background:#f0f0ff;
 }
-
+.content-boxx a{
+    color:var(--secondary);
+    font-weight:var(--semiMedium);
+}
 /* header */
 header .topHeader{
     padding:5px;
@@ -887,7 +890,7 @@ footer .secondary-footer .copyright p a {
     width: 100%;
 }
 
-.formGrid .section-lt form .groupForm input {
+.formGrid .section-lt form .groupForm input, .formGrid .section-lt form .groupForm select {
     outline:none;
     height: 50px;
     width: 100%;
@@ -897,19 +900,37 @@ footer .secondary-footer .copyright p a {
     padding-left: 15px;
     font-size: var(--font14);
 }
-
+.formGrid .section-lt form .groupForm label{
+    display:block;
+    margin-bottom: 10px;
+    font-weight: var(--semiMedium);
+}
 .paypal-btn img {
     display: block;
     margin: 40px auto 0px;
     width: 200px;
 }
-
+.subscribe .formGrid .section-lt form .groupForm img {
+    width: 100%;
+    max-width: 300px;
+}
 .formGrid .section-rt {
     padding-left: 50px;
     margin-left: 50px;
     border-left: 1px solid #dedede;
 }
-
+.btn-big {
+    width: 300px;
+    display: block;
+    margin: 50px auto 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: var(--secondary);
+    color: var(--primary);
+    font-weight: var(--semiMedium);
+}
 .formGrid .section-rt .heading-top span {
     font-size: var(--font24);
     font-weight: var(--bold);
@@ -1564,9 +1585,15 @@ footer .secondary-footer .copyright p a {
 }
 
 .news-section .news-content-inner-wrap .jop-offerings {
-    display: flex;
+    display: grid;
+    padding: 0;
+    grid-template-columns: 300px 1fr;
 }
-
+.news-section .news-content-inner-wrap .jop-offerings .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .news-section .news-content-inner-wrap .subscribe-section {
     grid-column: 2/3;
 }
@@ -1617,7 +1644,7 @@ footer .secondary-footer .copyright p a {
     display: inline-block;
 }
 .news-section .news-content-inner-wrap .jop-offerings .job-list {
-    padding-left: 20px;
+    padding: 30px 20px;
 }
 .news-section .news-content-inner-wrap .jop-offerings .job-list ul {
     padding: 0;
@@ -1628,9 +1655,12 @@ footer .secondary-footer .copyright p a {
     margin-bottom: 15px;
 }
 .news-section .news-content-inner-wrap .jop-offerings .job-list ul li a {
-    text-decoration: none;
     color: #000000;
     text-decoration: underline;
+    transition: all .2s linear;
+}
+.news-section .news-content-inner-wrap .jop-offerings .job-list ul li a:hover {
+    color: var(--secondary);
 }
 .news-section .news-content-inner-wrap .jop-offerings .job-list ul + a {
     color: var(--white);
@@ -1650,7 +1680,30 @@ footer .secondary-footer .copyright p a {
     margin-top: 10px;
     display: inline-block;
 }
+/* subscribe */
+.subscribe .formGrid {
+    display: block;
+}
 
+/* job offerings page */
+.job-offerings .events-list .event {
+    margin-bottom: 30px;
+    padding: 30px 20px;
+}
+.moreless-button {
+    color: var(--secondary);
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+}
+.moretext{
+    height:70px;
+    overflow:hidden;
+}
+.moretext.showMore-showLess{
+    height:100%;
+}
 /* responsive */
 @media screen and (max-width:1399px){
     header .mainNavbar .menubarWrap ul li {
@@ -1812,6 +1865,14 @@ footer .secondary-footer .copyright p a {
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 50px 20px;
     }
+    .news-section .category-list ul {
+        margin-top: 80px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .news-section .category-list ul li {
+        margin: 0px 0px;
+    }
 }
 @media screen and (min-width:992px){
     .btnToggle{
@@ -1819,6 +1880,17 @@ footer .secondary-footer .copyright p a {
     }
 }
 @media screen and (max-width:991px){
+    .news-section .news-content-inner-wrap {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+    .news-section .news-content-inner-wrap .top-news {
+        grid-row: unset;
+    }
+    .news-section .news-content-inner-wrap .subscribe-section {
+        grid-column: unset;
+    }
+
     header .mainNavbar .menubarWrap ul {
         display: none;
         position: absolute;
@@ -1895,6 +1967,15 @@ footer .secondary-footer .copyright p a {
     }
 }
 @media screen and (max-width:767px){
+    .content-boxx a{
+        font-size:var(--font14);
+    }
+    .subscribe .formGrid {
+        padding-top: 20px;
+    }
+    .btn-big {
+        width: 250px;
+    }
     .events-block .events-list .event{
         max-width:100%;
     }
@@ -2232,6 +2313,24 @@ footer .secondary-footer .copyright p a {
     }
     footer .secondary-footer .socialMedia ul li {
         margin-right: 20px;
+    }
+    .news-section .news-content-inner-wrap .jop-offerings {
+        grid-template-columns: 1fr;
+    }
+    .news-section .news-content-inner-wrap .top-news ul li a,     .news-section .news-content-inner-wrap .jop-offerings .job-list ul li a, .news-section .news-content-inner-wrap .jop-offerings .job-list ul + a, .news-section .news-content-inner-wrap .subscribe-section a{
+        font-size:var(--font14);
+    }
+    .news-section {
+        padding: 50px 0;
+    }
+    .news-section .category-list ul li a{
+        padding:10px 15px;
+    }
+    .moretext {
+        height: 60px;
+    }
+    .moreless-button {
+        font-size: var(--font14);
     }
 }
 @media screen and (max-width:574px){
