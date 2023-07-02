@@ -107,6 +107,7 @@ $(document).ready(function(){
         pauseOnHover: true,
         pauseOnFocus: true,
     });
+
 })
 
 
@@ -116,11 +117,16 @@ $(document).ready(function(){
         $('header .mainNavbar .menubarWrap ul').stop().slideToggle();
     });
 
-
     // read more read less
     $('.moreless-button').click(function() {
-        $('.moretext').toggleClass("showMore-showLess");
+        $(this).prev().toggleClass("showMore-showLess");
+        if($(this).prev().hasClass("showMore-showLess")){
+            $(this).text("Read less");
+        }else{
+            $(this).text("Read more");
+        }
     });
+
 });
 
 
